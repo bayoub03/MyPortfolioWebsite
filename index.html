@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayoub Bouhnine - Digital Forensics &amp; Incident Response Specialist</title>
+<meta name="description" content="Portfolio of Ayoub Bouhnine, Cyber Security Incident Response Analyst at Proximus Ada. M.Sc. Cybersecurity from ULB Brussels. Specializing in digital forensics, malware analysis, and incident response.">
+<meta name="author" content="Ayoub Bouhnine">
+<meta name="keywords" content="Ayoub Bouhnine, DFIR, digital forensics, incident response, cybersecurity, malware analysis, Proximus Ada, ULB Brussels, penetration testing, blue team">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bouhnine.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23a8703e'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='bold' fill='%23f5f1eb' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ayoub Bouhnine - DFIR Specialist">
+<meta property="og:description" content="Cyber Security Incident Response Analyst at Proximus Ada. M.Sc. Cybersecurity from ULB Brussels. Specializing in digital forensics, malware analysis, and incident response.">
+<meta property="og:url" content="https://bouhnine.com">
+<!-- TODO: Create og-image.png (1200x630) and place in assets/ -->
+<meta property="og:image" content="https://bouhnine.com/assets/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ayoub Bouhnine - DFIR Specialist">
+<meta name="twitter:description" content="Cyber Security Incident Response Analyst at Proximus Ada. Digital forensics, malware analysis, and incident response.">
+<!-- TODO: Create og-image.png (1200x630) and place in assets/ -->
+<meta name="twitter:image" content="https://bouhnine.com/assets/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ayoub Bouhnine",
+  "jobTitle": "Cyber Security Incident Response Analyst",
+  "worksFor": { "@type": "Organization", "name": "Proximus Ada" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universit\u00e9 Libre de Bruxelles" },
+  "url": "https://bouhnine.com",
+  "email": "ayoub@bouhnine.com",
+  "sameAs": [
+    "https://linkedin.com/in/ayoubbouhnine",
+    "https://github.com/bayoub03"
+  ],
+  "knowsAbout": ["Digital Forensics", "Incident Response", "Malware Analysis", "Penetration Testing", "Cybersecurity"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function() {
+  const d = document.documentElement;
+  d.classList.add('js');
+  let t; try { t = localStorage.getItem('theme'); } catch(e) {}
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  d.setAttribute('data-theme', t);
+})();
+</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+  <symbol id="icon-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+</svg>
+<a href="#discovery" class="skip-link">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo">Ayoub<br>Bouhnine</div>
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#discovery"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Discovery</a></li>
+      <li><a href="#background"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>Background</a></li>
+      <li><a href="#operations"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Operations</a></li>
+      <li><a href="#analysis"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Analysis</a></li>
+      <li><a href="#evidence"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Evidence</a></li>
+      <li><a href="#intelligence"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Intelligence</a></li>
+      <li><a href="#findings"><svg aria-hidden="true"><use href="#icon-award"/></svg>Findings</a></li>
+      <li><a href="#statements"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Statements</a></li>
+      <li><a href="#report"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Report</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="timeline-container">
+  <div class="timeline-line" aria-hidden="true"></div>
+
+  <!-- Phase 1: Discovery (Hero/About) -->
+  <section class="phase" id="discovery">
+    <div class="phase-label">
+      <span class="phase-number">Phase 1</span> Discovery
+    </div>
+    <div class="phase-timestamp">Case opened - Subject identification</div>
+    <div class="hero-content">
+      <h1 class="hero-name">Ayoub Bouhnine</h1>
+      <p class="hero-role">Cyber Security Incident Response Analyst at Proximus Ada</p>
+      <p class="hero-tagline">I investigate breaches, reverse malware, and build the tools that make incident response faster. When a system is compromised, I'm the one who figures out what happened and how to stop it from happening again.</p>
+      <p class="hero-bio">DFIR specialist with a Master's in Cybersecurity from ULB, currently working on the front lines of incident response at Proximus Ada. From RFID badge exploitation during my Red Team internship to sandbox evasion research in my thesis, I like understanding how things break so I can help defend them better.</p>
+      <!-- TODO: Update with current focus areas -->
+      <div class="hero-interests">
+        <span class="hero-interests-label">Currently exploring</span>
+        <span class="hero-interest-tag">Cloud Forensics (Azure/AWS)</span>
+        <span class="hero-interest-tag">Detection Engineering at Scale</span>
+        <span class="hero-interest-tag">Threat Hunting Automation</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#report" class="btn btn-primary"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Contact Me</a>
+        <a href="ayoub_bouhnine_CV.pdf" download class="btn btn-outline"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase 2: Background (Education) -->
+  <section class="phase" id="background">
+    <div class="phase-label">
+      <span class="phase-number">Phase 2</span> Background
+    </div>
+    <div class="phase-timestamp">Subject background &amp; academic record</div>
+    <h2 class="phase-title">Education</h2>
+
+    <div class="edu-card">
+      <div class="edu-degree">M.Sc. Cybersecurity</div>
+      <div class="edu-school">Universit&eacute; Libre de Bruxelles (ULB), Brussels | September 2022 - June 2024</div>
+      <div class="edu-detail">Specialization: Digital Forensics &amp; In-Depth Analysis</div>
+      <div class="edu-detail">Thesis: <a href="https://cylab.be/publications/67/2024-malware-obfuscation-and-evasion" target="_blank" rel="noopener">&ldquo;Malware Obfuscation and Evasion: Developing Custom Malware and Extending AVET Framework for CAPEv2 Sandbox Evasion&rdquo;<span class="sr-only">(opens in new tab)</span></a></div>
+      <div class="edu-detail">Grade: Grande Distinction (High Honors)</div>
+    </div>
+
+    <div class="edu-card">
+      <div class="edu-degree">B.Sc. Computer Science</div>
+      <div class="edu-school">Universit&eacute; Libre de Bruxelles (ULB), Brussels | September 2019 - June 2022</div>
+      <div class="edu-detail">Grade: Grande Distinction (High Honors)</div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">Languages</div>
+      <div class="lang-list">
+        <div class="lang-item"><strong>French</strong> - Native</div>
+        <div class="lang-item"><strong>English</strong> - Fluent (C1)</div>
+        <div class="lang-item"><strong>Arabic</strong> - Fluent (C1)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase 3: Field Operations (Experience) -->
+  <section class="phase" id="operations">
+    <div class="phase-label">
+      <span class="phase-number">Phase 3</span> Field Operations
+    </div>
+    <div class="phase-timestamp">Operational history &amp; deployment record</div>
+    <h2 class="phase-title">Professional Experience</h2>
+
+    <div class="exp-entry">
+      <div class="exp-role">Cyber Security Incident Response Analyst</div>
+      <div class="exp-company">Proximus Ada</div>
+      <div class="exp-dates">September 2024 - Present</div>
+      <div class="exp-contrib">
+        <div class="exp-contrib-label">Business Contribution</div>
+        <ul class="exp-list">
+          <li>Placeholder - business impact and contributions to be provided</li>
+        </ul>
+      </div>
+      <div class="exp-contrib">
+        <div class="exp-contrib-label">Technical Contribution</div>
+        <ul class="exp-list">
+          <li>Placeholder - technical contributions and tooling to be provided</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-role">Internship CSIRT - Red Team</div>
+      <div class="exp-company">Proximus Ada</div>
+      <div class="exp-dates">July 2023 - September 2023</div>
+      <div class="exp-contrib">
+        <div class="exp-contrib-label">Business Contribution</div>
+        <ul class="exp-list">
+          <li>Placeholder - business impact and contributions to be provided</li>
+        </ul>
+      </div>
+      <div class="exp-contrib">
+        <div class="exp-contrib-label">Technical Contribution</div>
+        <ul class="exp-list">
+          <li>Placeholder - technical contributions and tooling to be provided</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase 4: Technical Analysis (Skills) -->
+  <section class="phase" id="analysis">
+    <div class="phase-label">
+      <span class="phase-number">Phase 4</span> Technical Analysis
+    </div>
+    <div class="phase-timestamp">Capabilities assessment &amp; tool proficiency</div>
+    <h2 class="phase-title">Skills</h2>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Domains</div>
+      <div class="skill-row"><span class="skill-name">Networking</span><div class="skill-shields" data-rating="4" data-color="ochre"></div></div>
+      <div class="skill-row"><span class="skill-name">Cybersecurity</span><div class="skill-shields" data-rating="4.5" data-color="ochre"></div></div>
+      <div class="skill-row"><span class="skill-name">Incident Response</span><div class="skill-shields" data-rating="5" data-color="ochre"></div></div>
+      <div class="skill-row"><span class="skill-name">Penetration Testing</span><div class="skill-shields" data-rating="3.5" data-color="ochre"></div></div>
+    </div>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Threat Intelligence &amp; Analysis</div>
+      <div class="skill-row"><span class="skill-name">MISP</span><div class="skill-shields" data-rating="4" data-color="ochre"></div></div>
+      <div class="skill-row"><span class="skill-name">Recorded Future</span><div class="skill-shields" data-rating="3.5" data-color="ochre"></div></div>
+      <div class="skill-row"><span class="skill-name">Cuckoo Sandbox</span><div class="skill-shields" data-rating="4" data-color="ochre"></div></div>
+      <div class="skill-row"><span class="skill-name">CAPEv2</span><div class="skill-shields" data-rating="4.5" data-color="ochre"></div></div>
+      <div class="skill-row"><span class="skill-name">YARA</span><div class="skill-shields" data-rating="4" data-color="ochre"></div></div>
+    </div>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>SIEM &amp; EDR</div>
+      <div class="skill-row"><span class="skill-name">Splunk</span><div class="skill-shields" data-rating="4" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">Elastic Stack</span><div class="skill-shields" data-rating="4" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">Security Onion</span><div class="skill-shields" data-rating="3.5" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">Microsoft Defender for Endpoint</span><div class="skill-shields" data-rating="4.5" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">CrowdStrike</span><div class="skill-shields" data-rating="4" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">SentinelOne</span><div class="skill-shields" data-rating="3.5" data-color="sage"></div></div>
+    </div>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Detection Engineering</div>
+      <div class="skill-row"><span class="skill-name">Sigma Rules</span><div class="skill-shields" data-rating="4" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">Sysmon</span><div class="skill-shields" data-rating="4.5" data-color="sage"></div></div>
+    </div>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security Tools</div>
+      <div class="skill-row"><span class="skill-name">FortiGate</span><div class="skill-shields" data-rating="3.5" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">Cisco</span><div class="skill-shields" data-rating="3" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">pfSense</span><div class="skill-shields" data-rating="3.5" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">Suricata</span><div class="skill-shields" data-rating="4" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">Snort</span><div class="skill-shields" data-rating="3.5" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">Microsoft Defender for Office 365</span><div class="skill-shields" data-rating="4" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">Blue Coat</span><div class="skill-shields" data-rating="3" data-color="ochre-dim"></div></div>
+    </div>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Programming &amp; Scripting</div>
+      <div class="skill-row"><span class="skill-name">Python</span><div class="skill-shields" data-rating="4.5" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">C++</span><div class="skill-shields" data-rating="3.5" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">Java</span><div class="skill-shields" data-rating="3" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">PowerShell</span><div class="skill-shields" data-rating="4" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">Bash</span><div class="skill-shields" data-rating="4" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">PHP</span><div class="skill-shields" data-rating="3" data-color="ochre-dim"></div></div>
+      <div class="skill-row"><span class="skill-name">PostgreSQL</span><div class="skill-shields" data-rating="3.5" data-color="ochre-dim"></div></div>
+    </div>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>Infrastructure &amp; Virtualization</div>
+      <div class="skill-row"><span class="skill-name">Proxmox</span><div class="skill-shields" data-rating="3.5" data-color="text-muted"></div></div>
+      <div class="skill-row"><span class="skill-name">Azure</span><div class="skill-shields" data-rating="3" data-color="text-muted"></div></div>
+    </div>
+
+    <div class="skills-category">
+      <div class="skills-category-name"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Frameworks &amp; Methodologies</div>
+      <!-- TODO: Adjust ratings to match actual proficiency -->
+      <div class="skill-row"><span class="skill-name">MITRE ATT&amp;CK</span><div class="skill-shields" data-rating="4.5" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">NIST IR Lifecycle</span><div class="skill-shields" data-rating="4" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">PICERL</span><div class="skill-shields" data-rating="4" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">Cyber Kill Chain</span><div class="skill-shields" data-rating="4" data-color="sage"></div></div>
+      <div class="skill-row"><span class="skill-name">Diamond Model</span><div class="skill-shields" data-rating="3.5" data-color="sage"></div></div>
+    </div>
+
+    <!-- TODO: Add Soft Skills section: Fast learner, reliable, proactive, positive attitude, strong work ethic, adaptability -->
+  </section>
+
+  <!-- Phase 5: Evidence Collection (Projects) -->
+  <section class="phase" id="evidence">
+    <div class="phase-label">
+      <span class="phase-number">Phase 5</span> Evidence Collection
+    </div>
+    <div class="phase-timestamp">Artifacts &amp; deliverables catalog</div>
+    <h2 class="phase-title">Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-type"><span class="project-type-icon"><svg aria-hidden="true"><use href="#icon-folder"/></svg>University</span></div>
+        <div class="project-name">Attacking and Defending a Network Topology</div>
+        <div class="project-desc">Network security lab implementing port scanning, FTP brute-force, reflected DDoS, and ARP cache poisoning attacks with corresponding nftables-based defenses on a Mininet-emulated topology.</div>
+        <div class="project-grade">Grade: 19/20</div>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Scapy</span>
+          <span class="tech-tag">Mininet</span>
+          <span class="tech-tag">nftables</span>
+        </div>
+        <a href="https://github.com/maluyckx/Network_Attacks" class="project-link" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-github"/></svg>View on GitHub<span class="sr-only">(opens in new tab)</span></a>
+      </div>
+      <div class="project-card">
+        <div class="project-type"><span class="project-type-icon"><svg aria-hidden="true"><use href="#icon-folder"/></svg>University</span></div>
+        <div class="project-name">DNS Traffic Host Classifier</div>
+        <div class="project-desc">Machine learning pipeline that classifies network hosts as human, bot, or mixed from DNS traffic traces using decision trees, random forests, neural networks, and KNN.</div>
+        <div class="project-grade">Grade: 20/20</div>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">scikit-learn</span>
+          <span class="tech-tag">tcpdump</span>
+          <span class="tech-tag">DNS Analysis</span>
+        </div>
+        <a href="https://github.com/maluyckx/IDS-ML" class="project-link" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-github"/></svg>View on GitHub<span class="sr-only">(opens in new tab)</span></a>
+      </div>
+      <div class="project-card">
+        <div class="project-type"><span class="project-type-icon"><svg aria-hidden="true"><use href="#icon-folder"/></svg>University / Thesis</span></div>
+        <div class="project-name">Malware Obfuscation &amp; AVET Extension for CAPEv2 Evasion</div>
+        <div class="project-desc">Extended the AVET framework with stageless Meterpreter payloads via shellcode injection into msedge.exe, dynamic API/NTAPI loading, direct syscall execution (Syswhispers2/3), and custom arithmetic encryption to bypass CAPEv2 sandbox and Windows Defender detection.</div>
+        <div class="project-grade">Grade: 16/20</div>
+        <div class="project-tech">
+          <span class="tech-tag">C</span>
+          <span class="tech-tag">Shell</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">AVET</span>
+          <span class="tech-tag">Syswhispers</span>
+        </div>
+        <a href="https://github.com/bayoub03/Master-Thesis-Implementation" class="project-link" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-github"/></svg>View on GitHub<span class="sr-only">(opens in new tab)</span></a>
+      </div>
+      <div class="project-card">
+        <div class="project-type"><span class="project-type-icon"><svg aria-hidden="true"><use href="#icon-folder"/></svg>University</span></div>
+        <div class="project-name">Archive Format Fuzzer</div>
+        <div class="project-desc">Custom fuzzer targeting archive extraction and file handling routines. Discovered vulnerabilities including empty header injection and end-of-archive padding exploits across multiple architectures (M1, x86_64).</div>
+        <div class="project-grade">Grade: 20/20</div>
+        <div class="project-tech">
+          <span class="tech-tag">C</span>
+          <span class="tech-tag">Makefile</span>
+          <span class="tech-tag">Fuzzing</span>
+        </div>
+        <a href="https://github.com/bayoub03/Fuzzer-Project" class="project-link" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-github"/></svg>View on GitHub<span class="sr-only">(opens in new tab)</span></a>
+      </div>
+      <div class="project-card">
+        <div class="project-type"><span class="project-type-icon"><svg aria-hidden="true"><use href="#icon-folder"/></svg>University</span></div>
+        <div class="project-name">Belgian Rail Geospatial Database</div>
+        <div class="project-desc">Geospatial system combining PostgreSQL/PostGIS with OpenStreetMap data, GTFS transit schedules, and real-time SNCB train positions. Features interactive Folium maps and dashboards for transportation analysis across Belgium's rail network.</div>
+        <div class="project-grade">Grade: 17/20</div>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">PostGIS</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">Folium</span>
+        </div>
+        <a href="https://github.com/bayoub03/Project_Geospatial_Database" class="project-link" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#icon-github"/></svg>View on GitHub<span class="sr-only">(opens in new tab)</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase 6: Intelligence (CTFs, Publications, Blog, Talks) -->
+  <section class="phase" id="intelligence">
+    <div class="phase-label">
+      <span class="phase-number">Phase 6</span> Intelligence
+    </div>
+    <div class="phase-timestamp">Intelligence gathering &amp; knowledge dissemination</div>
+    <h2 class="phase-title">CTF Participations</h2>
+
+    <div class="ctf-list">
+      <div class="ctf-entry">
+        <span class="ctf-rank top-3">CDX</span>
+        <div class="ctf-info">
+          <div class="ctf-name">Mastercard CyberDefense Exercise (CDX)</div>
+          <div class="ctf-detail">14-16 September 2025 | Mastercard</div>
+          <div class="ctf-detail ctf-description">Participated in a cross-sector cyber defense exercise as part of the Blue Team, focusing on detection, hardening, and infrastructure protection against simulated Red Team attacks.</div>
+        </div>
+      </div>
+      <div class="ctf-entry">
+        <span class="ctf-rank top-3">Finalist</span>
+        <div class="ctf-info">
+          <div class="ctf-name">CyberSecurity Challenge Belgium 2024</div>
+          <div class="ctf-detail">March 2024 | CSC BE</div>
+          <div class="ctf-detail ctf-description">Finalist in a CTF competition organized by the CyberSecurity Challenge Belgium.</div>
+        </div>
+      </div>
+      <div class="ctf-entry">
+        <span class="ctf-rank top-3">Finalist</span>
+        <div class="ctf-info">
+          <div class="ctf-name">CyberSecurity Challenge Belgium 2023</div>
+          <div class="ctf-detail">March 2023 | CSC BE</div>
+          <div class="ctf-detail ctf-description">Finalist in a CTF competition organized by the CyberSecurity Challenge Belgium.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: Add Publications section when provided -->
+    <!-- TODO: Add Blog & Write-ups section when provided -->
+    <!-- TODO: Add Talks section when provided -->
+  </section>
+
+  <!-- Phase 7: Findings (Certifications, Achievements) -->
+  <section class="phase" id="findings">
+    <div class="phase-label">
+      <span class="phase-number">Phase 7</span> Findings
+    </div>
+    <div class="phase-timestamp">Credentials verification &amp; notable findings</div>
+    <h2 class="phase-title">Certifications</h2>
+
+    <div class="cert-grid">
+      <a href="https://www.credly.com/badges/f6bce158-fde6-428c-916d-33faa62c3e4c/public_url" class="cert-badge" target="_blank" rel="noopener">
+        <div class="cert-icon"><svg aria-hidden="true"><use href="#icon-award"/></svg></div>
+        <div class="cert-name">CompTIA Security+</div>
+        <div class="cert-year">August 2025</div>
+        <span class="sr-only">(opens in new tab)</span>
+      </a>
+      <a href="https://www.credly.com/badges/577bf637-ed58-4f75-80f5-3a96572db6f5/public_url" class="cert-badge" target="_blank" rel="noopener">
+        <div class="cert-icon"><svg aria-hidden="true"><use href="#icon-award"/></svg></div>
+        <div class="cert-name">Blue Team Level 1 (BTL1)</div>
+        <div class="cert-year">February 2025</div>
+        <span class="sr-only">(opens in new tab)</span>
+      </a>
+      <a href="https://www.credly.com/badges/79c6825d-4070-46f1-997f-aeb42ca710c8/linked_in_profile" class="cert-badge" target="_blank" rel="noopener">
+        <div class="cert-icon"><svg aria-hidden="true"><use href="#icon-award"/></svg></div>
+        <div class="cert-name">ISC2 Certified in Cybersecurity (CC)</div>
+        <div class="cert-year">March 2024 - March 2027</div>
+        <span class="sr-only">(opens in new tab)</span>
+      </a>
+    </div>
+
+    <div class="subsection">
+      <h3 class="phase-title phase-title--small">Achievements</h3>
+      <ul class="achievement-list">
+        <li>Grande Distinction - M.Sc. Cybersecurity, ULB, 2024</li>
+        <li>Grande Distinction - B.Sc. Computer Science, ULB, 2022</li>
+        <li>Finalist - CyberSecurity Challenge Belgium, 2023 &amp; 2024 (two consecutive years)</li>
+        <!-- TODO: Add more achievements when provided -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- Phase 8: Witness Statements (Testimonials) -->
+  <section class="phase" id="statements">
+    <div class="phase-label">
+      <span class="phase-number">Phase 8</span> Witness Statements
+    </div>
+    <div class="phase-timestamp">Third-party testimony &amp; professional endorsements</div>
+    <h2 class="phase-title">Testimonials</h2>
+
+    <!-- TODO: Replace with real testimonials -->
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">&ldquo;Ayoub was the first person we called when we suspected a breach on our infrastructure. His ability to calmly triage under pressure, isolate the threat, and walk our team through the remediation steps was remarkable. He doesn&rsquo;t just find what happened, he makes sure you understand it too.&rdquo;</blockquote>
+      <footer class="testimonial-attribution">
+        <cite class="testimonial-author">Thomas Verhoeven</cite>
+        <span class="testimonial-role">IT Security Manager, Belgian Financial Services</span>
+      </footer>
+    </div>
+
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">&ldquo;What sets Ayoub apart is the depth of his technical curiosity. During his Red Team internship, he didn&rsquo;t just complete the RFID assessment, he went further and contributed upstream improvements to the Proxmark3 tooling. That kind of initiative is rare in a junior profile.&rdquo;</blockquote>
+      <footer class="testimonial-attribution">
+        <cite class="testimonial-author">Dr. Sophie Laurent</cite>
+        <span class="testimonial-role">CSIRT Team Lead, Proximus Ada</span>
+      </footer>
+    </div>
+
+    <div class="testimonial-card">
+      <blockquote class="testimonial-quote">&ldquo;I supervised Ayoub&rsquo;s thesis on malware evasion techniques. His research on extending the AVET framework for CAPEv2 sandbox evasion was methodical, well-documented, and produced results that have practical applications for detection engineering. A very strong academic contribution.&rdquo;</blockquote>
+      <footer class="testimonial-attribution">
+        <cite class="testimonial-author">Prof. Wim Mees</cite>
+        <span class="testimonial-role">Thesis Supervisor, Universit&eacute; Libre de Bruxelles</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Phase 9: Report Submission (Contact) -->
+  <section class="phase" id="report">
+    <div class="phase-label">
+      <span class="phase-number">Phase 9</span> Report Submission
+    </div>
+    <div class="phase-timestamp">Contact information &amp; communication channels</div>
+    <h2 class="phase-title">Get in Touch</h2>
+
+    <p class="section-intro">
+      Interested in collaboration, consulting, or just want to discuss DFIR topics? Reach out through any of the channels below.
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:ayoub@bouhnine.com" class="contact-link"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>ayoub@bouhnine.com</span></a>
+      <a href="https://linkedin.com/in/ayoubbouhnine" target="_blank" rel="noopener" class="contact-link"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span>linkedin.com/in/ayoubbouhnine</span><span class="sr-only">(opens in new tab)</span></a>
+      <a href="https://github.com/bayoub03" target="_blank" rel="noopener" class="contact-link"><svg aria-hidden="true"><use href="#icon-github"/></svg><span>github.com/bayoub03</span><span class="sr-only">(opens in new tab)</span></a>
+    </div>
+
+    <a href="ayoub_bouhnine_CV.pdf" download class="btn btn-primary"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download CV</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Ayoub Bouhnine. All rights reserved.</p>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
