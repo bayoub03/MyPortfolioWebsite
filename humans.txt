@@ -1,0 +1,14 @@
+/* TEAM */
+Name: Ayoub Bouhnine
+Role: Developer, Designer
+Site: https://bouhnine.com
+Contact: ayoub@bouhnine.com
+LinkedIn: https://linkedin.com/in/ayoubbouhnine
+GitHub: https://github.com/bayoub03
+Location: Brussels, Belgium
+
+/* SITE */
+Standards: HTML5, CSS3, ES6+
+Components: CSS Custom Properties, Intersection Observer, JSON-LD
+Fonts: Syne, Space Grotesk (Google Fonts)
+Software: VS Code, Git

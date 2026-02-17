@@ -1,0 +1,11 @@
+# Ayoub Bouhnine — Personal Portfolio
+
+> Cyber Security Incident Response Analyst at Proximus Ada. M.Sc. Cybersecurity from Université Libre de Bruxelles.
+
+This is a single-page personal portfolio at https://bouhnine.com covering professional experience, education, skills, projects, certifications, CTF participations, and contact information.
+
+## Contact
+
+- Email: ayoub@bouhnine.com
+- LinkedIn: https://linkedin.com/in/ayoubbouhnine
+- GitHub: https://github.com/bayoub03

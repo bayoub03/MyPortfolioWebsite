@@ -26,15 +26,17 @@
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navLinks');
   toggle.addEventListener('click', function() {
-    const open = links.classList.toggle('open');
+    var open = links.classList.toggle('open');
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open);
+    document.body.classList.toggle('nav-open', open);
   });
 
   function closeNav() {
     links.classList.remove('open');
     toggle.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-open');
   }
 
   // Close mobile nav on link click or outside click
@@ -44,6 +46,12 @@
 
   document.addEventListener('click', function(e) {
     if (links.classList.contains('open') && !e.target.closest('.nav')) {
+      closeNav();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
       closeNav();
     }
   });
@@ -134,7 +142,11 @@
     });
   }
   cacheSectionRects();
-  window.addEventListener('resize', cacheSectionRects, { passive: true });
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(cacheSectionRects, 200);
+  }, { passive: true });
 
   function onScroll() {
     const sy = window.scrollY;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Ayoub Bouhnine</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23a8703e'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='bold' fill='%23f5f1eb' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<script>
+(function() {
+  var d = document.documentElement;
+  var t; try { t = localStorage.getItem('theme'); } catch(e) {}
+  if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  d.setAttribute('data-theme', t);
+})();
+</script>
+<style>
+  :root {
+    --bg: #f5f1eb;
+    --text: #2b2520;
+    --muted: #5a5248;
+    --accent: #a8703e;
+    --accent-hover: #8a5c32;
+  }
+  [data-theme="dark"] {
+    --bg: #1e2028;
+    --text: #e8e2d6;
+    --muted: #b8b2a6;
+    --accent: #c4956a;
+    --accent-hover: #a07a56;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .container {
+    text-align: center;
+    padding: 2rem;
+  }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+    line-height: 1;
+  }
+  p {
+    font-size: 1.2rem;
+    color: var(--muted);
+    margin: 1rem 0 2rem;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+  }
+  a:hover {
+    color: var(--accent-hover);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>404</h1>
+  <p>This page doesn't exist.</p>
+  <a href="/">Back to home</a>
+</div>
+</body>
+</html>
