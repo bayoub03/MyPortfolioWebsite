@@ -761,113 +761,17 @@ a:hover {
 }
 
 .skill-row {
-  display: flex;
-  align-items: center;
   margin-bottom: 0.5rem;
-  gap: 1rem;
-}
-
-@media (max-width: 480px) {
-  .skill-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.25rem 0.5rem;
-    align-items: center;
-  }
 }
 
 .skill-name {
   font-size: 0.85rem;
   color: var(--text-secondary);
-  width: 210px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .skill-name {
-    width: auto;
-  }
 }
 
 @media (max-width: 480px) {
   .skill-name {
-    width: auto;
     font-size: 0.82rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-
-.skill-shields {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-@media (max-width: 480px) {
-  .skill-shields {
-    flex-shrink: 0;
-    justify-self: end;
-  }
-}
-
-.skill-shield {
-  width: 18px;
-  height: 20px;
-  position: relative;
-}
-
-@media (max-width: 480px) {
-  .skill-shield {
-    width: 14px;
-    height: 16px;
-  }
-}
-
-.skill-shield svg {
-  width: 100%;
-  height: 100%;
-}
-
-.skill-shield .shield-bg {
-  fill: var(--bg-tertiary);
-  stroke: var(--border-color);
-  stroke-width: 1;
-}
-
-.js .skill-shield {
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.js .skills-category.shields-visible .skill-shield {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.skill-shield .shield-fill {
-  transition: opacity 0.4s ease;
-}
-
-.skill-shield[data-state="empty"] .shield-fill { opacity: 0; }
-
-.skill-shield .shield-fill.ochre { fill: var(--accent-ochre); }
-.skill-shield .shield-fill.sage { fill: var(--accent-sage); }
-.skill-shield .shield-fill.ochre-dim { fill: var(--accent-ochre-dim); }
-.skill-shield .shield-fill.text-muted { fill: var(--text-muted); }
-
-.skill-rating-text {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-left: 0.35rem;
-  white-space: nowrap;
-}
-
-@media (max-width: 480px) {
-  .skill-rating-text {
-    font-size: 0.7rem;
   }
 }
 
@@ -1148,52 +1052,6 @@ a:hover {
   transform: rotate(45deg);
 }
 
-/* Testimonials */
-.testimonial-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-left: 3px solid var(--accent-ochre);
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin-bottom: 1.25rem;
-  transition: border-color 0.3s var(--ease);
-}
-
-.testimonial-card:hover {
-  border-left-color: var(--text-primary);
-}
-
-.testimonial-quote {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  font-style: italic;
-  margin: 0 0 1rem;
-  padding: 0;
-  line-height: 1.7;
-}
-
-.testimonial-attribution {
-  display: block;
-}
-
-.testimonial-author {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent-ochre);
-}
-
-.testimonial-role {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-@media (max-width: 480px) {
-  .testimonial-card {
-    padding: 1rem;
-    margin-bottom: 0.75rem;
-  }
-}
-
 /* Languages */
 .lang-list {
   display: flex;
@@ -1452,11 +1310,6 @@ a:hover {
     page-break-inside: avoid;
   }
 
-  .testimonial-card {
-    border: 1px solid #ccc;
-    page-break-inside: avoid;
-  }
-
   .cert-badge {
     border: 1px solid #ccc;
   }
@@ -1468,15 +1321,6 @@ a:hover {
   .ctf-entry {
     border: 1px solid #ccc;
     page-break-inside: avoid;
-  }
-
-  .skill-shield .shield-bg {
-    fill: #ddd !important;
-    stroke: #999 !important;
-  }
-
-  .skill-shield .shield-fill {
-    fill: #444 !important;
   }
 
   .contact-link {

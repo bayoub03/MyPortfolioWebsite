@@ -72,60 +72,6 @@
     phaseObserver.observe(phase);
   });
 
-  // Shield rating generation
-  const shieldPath = 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z';
-  let clipCounter = 0;
-  document.querySelectorAll('.skill-shields').forEach(function(container) {
-    const rating = parseFloat(container.getAttribute('data-rating')) || 0;
-    const colorClass = container.getAttribute('data-color') || 'ochre';
-    const displayRating = rating % 1 === 0.5 ? rating.toFixed(1) : rating.toFixed(0);
-    let html = '';
-    for (let i = 1; i <= 5; i++) {
-      let state = 'empty';
-      if (i <= rating) state = 'full';
-      else if (i - 0.5 <= rating) state = 'half';
-      if (state === 'half') {
-        const clipId = 'shalf-' + (clipCounter++);
-        html += '<span class="skill-shield" data-state="half">' +
-          '<svg viewBox="0 0 24 24" aria-hidden="true">' +
-          '<defs><clipPath id="' + clipId + '">' +
-          '<rect x="0" y="0" width="12" height="24"/></clipPath></defs>' +
-          '<path class="shield-bg" d="' + shieldPath + '"/>' +
-          '<path class="shield-fill ' + colorClass + '" d="' + shieldPath + '" clip-path="url(#' + clipId + ')"/>' +
-          '</svg></span>';
-      } else {
-        html += '<span class="skill-shield" data-state="' + state + '">' +
-          '<svg viewBox="0 0 24 24" aria-hidden="true">' +
-          '<path class="shield-bg" d="' + shieldPath + '"/>' +
-          '<path class="shield-fill ' + colorClass + '" d="' + shieldPath + '"/>' +
-          '</svg></span>';
-      }
-    }
-    html += '<span class="skill-rating-text" aria-hidden="true">' + displayRating + '/5</span>';
-    container.setAttribute('role', 'img');
-    container.setAttribute('aria-label', 'Rating: ' + displayRating + ' out of 5');
-    container.innerHTML = html;
-  });
-
-  // Stagger-reveal skill shields
-  const skillCategories = document.querySelectorAll('.skills-category');
-  const shieldObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        const shields = entry.target.querySelectorAll('.skill-shield');
-        shields.forEach(function(shield, i) {
-          shield.style.transitionDelay = (i * 0.04) + 's';
-        });
-        entry.target.classList.add('shields-visible');
-        shieldObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  skillCategories.forEach(function(cat) {
-    shieldObserver.observe(cat);
-  });
-
   // Active nav link on scroll + scroll-to-top (merged)
   const navAnchors = document.querySelectorAll('.nav-links a');
   const scrollTopBtn = document.getElementById('scrollTop');
