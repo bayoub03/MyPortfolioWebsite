@@ -720,24 +720,6 @@ a:hover {
   background: var(--accent-sage);
 }
 
-.exp-contrib {
-  margin-bottom: 0.75rem;
-}
-
-.exp-contrib:last-child {
-  margin-bottom: 0;
-}
-
-.exp-contrib-label {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--accent-ochre);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.35rem;
-}
-
 /* Skills */
 .skills-category {
   margin-bottom: 2rem;
