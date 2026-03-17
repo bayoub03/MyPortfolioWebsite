@@ -2,7 +2,7 @@
 
 > Cyber Security Incident Response Analyst at Proximus Ada. M.Sc. Cybersecurity from Université Libre de Bruxelles.
 
-This is a single-page personal portfolio at https://bouhnine.com covering professional experience, education, skills, projects, certifications, CTF participations, and contact information.
+This is a single-page personal portfolio at https://ayoub.bouhnine.com covering professional experience, education, skills, projects, certifications, CTF participations, and contact information.
 
 ## Contact
 

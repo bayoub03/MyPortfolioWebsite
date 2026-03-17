@@ -1,7 +1,7 @@
 /* TEAM */
 Name: Ayoub Bouhnine
 Role: Developer, Designer
-Site: https://bouhnine.com
+Site: https://ayoub.bouhnine.com
 Contact: ayoub@bouhnine.com
 LinkedIn: https://www.linkedin.com/in/ayoub-bouhnine-44ba9224a/
 GitHub: https://github.com/bayoub03

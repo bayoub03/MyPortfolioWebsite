@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bouhnine.com/sitemap.xml
+Sitemap: https://ayoub.bouhnine.com/sitemap.xml
