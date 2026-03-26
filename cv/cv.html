@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayoub Bouhnine - CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ========== RESET & PAGE ========== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: 210mm 297mm;
+      margin: 10mm 12mm;
+    }
+
+    html, body {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 8pt;
+      line-height: 1.4;
+      color: #2b2520;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ========== COLORS ========== */
+    :root {
+      --text-primary: #2b2520;
+      --text-secondary: #5a5248;
+      --text-muted: #8a8278;
+      --accent-ochre: #a8703e;
+      --accent-ochre-dim: #8a5c32;
+      --accent-sage: #4a6b4a;
+      --accent-sage-dim: #3d5a3d;
+      --bg-secondary: #ebe7e0;
+      --border-color: #d4cfc6;
+    }
+
+    /* ========== HEADER ========== */
+    .cv-header { margin-bottom: 4mm; }
+
+    .cv-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 24pt;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .cv-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 10pt;
+      color: var(--accent-ochre);
+      margin-top: 1mm;
+    }
+
+    .cv-contact {
+      margin-top: 2.5mm;
+      font-size: 7.5pt;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .cv-contact a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .cv-contact .sep {
+      color: var(--border-color);
+      margin: 0 1mm;
+    }
+
+    .cv-header-line {
+      height: 1.5px;
+      background: linear-gradient(to right, var(--accent-ochre), var(--accent-ochre-dim), transparent);
+      margin-top: 3mm;
+    }
+
+    /* ========== TWO-COLUMN LAYOUT (Float) ========== */
+    .cv-row { overflow: hidden; }
+
+    .cv-sidebar {
+      float: left;
+      width: 62mm;
+    }
+
+    .cv-main {
+      margin-left: 67mm;
+    }
+
+    /* ========== PAGE BREAK ========== */
+    .page-break {
+      page-break-before: always;
+    }
+
+    /* ========== SECTIONS ========== */
+    .cv-section { margin-bottom: 3.5mm; }
+    .cv-section:last-child { margin-bottom: 0; }
+
+    .cv-section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-left: 3px solid var(--accent-ochre);
+      padding-left: 2.5mm;
+      margin-bottom: 2mm;
+      line-height: 1.2;
+    }
+
+    /* ========== EDUCATION ========== */
+    .edu-entry { margin-bottom: 2.5mm; }
+    .edu-entry:last-child { margin-bottom: 0; }
+
+    .edu-degree {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .edu-school {
+      font-weight: 500;
+      font-size: 7.5pt;
+      color: var(--accent-ochre);
+      margin-top: 0.3mm;
+    }
+
+    .edu-date {
+      font-size: 7pt;
+      color: var(--text-muted);
+      margin-top: 0.3mm;
+    }
+
+    .edu-detail {
+      font-size: 7pt;
+      color: var(--text-secondary);
+      margin-top: 0.5mm;
+      line-height: 1.35;
+    }
+
+    .edu-honors {
+      display: inline-block;
+      font-size: 6.5pt;
+      font-weight: 600;
+      color: var(--accent-ochre);
+      background: rgba(168, 112, 62, 0.1);
+      padding: 0.5mm 1.5mm;
+      border-radius: 2px;
+      margin-top: 0.5mm;
+    }
+
+    /* ========== CERTIFICATIONS ========== */
+    .cert-entry { margin-bottom: 1.5mm; }
+    .cert-entry:last-child { margin-bottom: 0; }
+
+    .cert-name {
+      font-weight: 600;
+      font-size: 7.5pt;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .cert-name::before {
+      content: "\2605  ";
+      color: var(--accent-ochre);
+      font-size: 6pt;
+    }
+
+    .cert-date {
+      font-size: 6.5pt;
+      color: var(--text-muted);
+      margin-top: 0.2mm;
+      padding-left: 3mm;
+    }
+
+    /* ========== LANGUAGES ========== */
+    .lang-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .lang-table td {
+      font-size: 7.5pt;
+      padding: 0.5mm 0;
+    }
+
+    .lang-table .lang-name {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .lang-table .lang-level {
+      text-align: right;
+      font-size: 6.5pt;
+      color: var(--text-muted);
+    }
+
+    /* ========== ACHIEVEMENTS ========== */
+    .achievement-item {
+      font-size: 7pt;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin-bottom: 1mm;
+      padding-left: 2.5mm;
+    }
+
+    .achievement-item::before {
+      content: "\25CF  ";
+      color: var(--accent-ochre);
+      font-size: 5pt;
+      margin-left: -2.5mm;
+    }
+
+    .achievement-item:last-child { margin-bottom: 0; }
+
+    /* ========== EXPERIENCE ========== */
+    .exp-entry { margin-bottom: 3mm; }
+    .exp-entry:last-child { margin-bottom: 0; }
+
+    .exp-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 9pt;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+
+    .exp-company {
+      font-weight: 500;
+      font-size: 8pt;
+      color: var(--accent-ochre);
+      margin-top: 0.3mm;
+    }
+
+    .exp-date {
+      font-size: 7pt;
+      color: var(--text-muted);
+      margin-top: 0.3mm;
+      margin-bottom: 1mm;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-bullets li {
+      font-size: 7.5pt;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin-bottom: 0.8mm;
+      padding-left: 3mm;
+    }
+
+    .exp-bullets li::before {
+      content: "\25CF  ";
+      color: var(--accent-sage);
+      font-size: 4.5pt;
+      margin-left: -3mm;
+    }
+
+    .exp-bullets li:last-child { margin-bottom: 0; }
+
+    /* ========== SKILLS ========== */
+    .skills-category { margin-bottom: 1.8mm; }
+    .skills-category:last-child { margin-bottom: 0; }
+
+    .skills-category-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 7pt;
+      color: var(--accent-ochre);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.8mm;
+    }
+
+    .skill-pill {
+      display: inline;
+      font-size: 6.5pt;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+      padding: 0.6mm 1.8mm;
+      border-radius: 2px;
+      line-height: 2.2;
+      white-space: nowrap;
+    }
+
+    /* ========== CTF ========== */
+    .ctf-entry {
+      margin-bottom: 2.5mm;
+      padding-left: 2.5mm;
+      border-left: 2px solid var(--accent-sage);
+    }
+
+    .ctf-entry:last-child { margin-bottom: 0; }
+
+    .ctf-name {
+      font-weight: 600;
+      font-size: 7.5pt;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .ctf-detail {
+      font-size: 6.5pt;
+      color: var(--text-muted);
+      margin-top: 0.3mm;
+    }
+
+    .ctf-role {
+      font-size: 6.5pt;
+      color: var(--accent-sage);
+      font-weight: 500;
+      margin-top: 0.3mm;
+    }
+
+    /* ========== PROJECTS ========== */
+    .project-entry {
+      margin-bottom: 3mm;
+      padding-left: 3mm;
+      border-left: 2px solid var(--accent-sage);
+    }
+
+    .project-entry:last-child { margin-bottom: 0; }
+
+    .project-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 8.5pt;
+      color: var(--text-primary);
+      line-height: 1.25;
+      display: inline;
+    }
+
+    .project-grade {
+      font-size: 7pt;
+      font-weight: 600;
+      color: var(--accent-ochre);
+      background: rgba(168, 112, 62, 0.1);
+      padding: 0.3mm 1.5mm;
+      border-radius: 2px;
+      float: right;
+    }
+
+    .project-tech {
+      margin-top: 1mm;
+      line-height: 2;
+    }
+
+    .project-tech-pill {
+      display: inline;
+      font-size: 6pt;
+      font-weight: 500;
+      color: var(--accent-sage-dim);
+      background: rgba(74, 107, 74, 0.08);
+      padding: 0.5mm 1.5mm;
+      border-radius: 2px;
+      line-height: 2.2;
+    }
+
+    .project-desc {
+      font-size: 7pt;
+      color: var(--text-secondary);
+      margin-top: 0.8mm;
+      line-height: 1.4;
+    }
+
+    /* ========== DIVIDER ========== */
+    .sidebar-divider {
+      height: 1px;
+      background: var(--border-color);
+      margin: 3mm 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="cv-header">
+    <h1 class="cv-name">Ayoub Bouhnine</h1>
+    <p class="cv-role">Cyber Security Incident Response Analyst</p>
+    <div class="cv-contact">
+      <a href="mailto:ayoub@bouhnine.com">ayoub@bouhnine.com</a>
+      <span class="sep">|</span>
+      <a href="https://www.linkedin.com/in/ayoub-bouhnine-44ba9224a/">linkedin.com/in/ayoub-bouhnine</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/bayoub03">github.com/bayoub03</a>
+      <span class="sep">|</span>
+      Brussels, Belgium
+      <span class="sep">|</span>
+      <a href="https://ayoub.bouhnine.com">ayoub.bouhnine.com</a>
+    </div>
+    <div class="cv-header-line"></div>
+  </header>
+
+  <!-- ===== PAGE 1 BODY ===== -->
+  <div class="cv-row">
+    <aside class="cv-sidebar">
+
+      <!-- EDUCATION -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Education</h2>
+        <div class="edu-entry">
+          <div class="edu-degree">M.Sc. Cybersecurity</div>
+          <div class="edu-school">Universit&eacute; Libre de Bruxelles (ULB)</div>
+          <div class="edu-date">Sep 2022 &mdash; Jun 2024</div>
+          <div class="edu-detail">Specialization: Digital Forensics &amp; In-Depth Analysis</div>
+          <div class="edu-detail" style="font-style: italic;">Thesis: Malware Obfuscation &amp; Evasion &mdash; AVET Framework Extension for CAPEv2 Sandbox Evasion</div>
+          <span class="edu-honors">Grande Distinction</span>
+        </div>
+        <div class="edu-entry">
+          <div class="edu-degree">B.Sc. Computer Science</div>
+          <div class="edu-school">Universit&eacute; Libre de Bruxelles (ULB)</div>
+          <div class="edu-date">Sep 2019 &mdash; Jun 2022</div>
+          <span class="edu-honors">Grande Distinction</span>
+        </div>
+      </section>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- CERTIFICATIONS -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Certifications</h2>
+        <div class="cert-entry">
+          <div class="cert-name">CompTIA Security+</div>
+          <div class="cert-date">August 2025</div>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-name">Blue Team Level 1 (BTL1)</div>
+          <div class="cert-date">February 2025</div>
+        </div>
+        <div class="cert-entry">
+          <div class="cert-name">ISC2 Certified in Cybersecurity (CC)</div>
+          <div class="cert-date">March 2024 &mdash; March 2027</div>
+        </div>
+      </section>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- LANGUAGES -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Languages</h2>
+        <table class="lang-table">
+          <tr><td class="lang-name">French</td><td class="lang-level">Native</td></tr>
+          <tr><td class="lang-name">English</td><td class="lang-level">Fluent (C1)</td></tr>
+          <tr><td class="lang-name">Arabic</td><td class="lang-level">Fluent (C1)</td></tr>
+        </table>
+      </section>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- ACHIEVEMENTS -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Achievements</h2>
+        <div class="achievement-item">Grande Distinction &mdash; M.Sc. Cybersecurity, ULB, 2024</div>
+        <div class="achievement-item">Grande Distinction &mdash; B.Sc. Computer Science, ULB, 2022</div>
+        <div class="achievement-item">Finalist &mdash; CyberSecurity Challenge Belgium, 2023 &amp; 2024</div>
+      </section>
+
+    </aside>
+
+    <div class="cv-main">
+
+      <!-- PROFESSIONAL EXPERIENCE -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Professional Experience</h2>
+        <div class="exp-entry">
+          <div class="exp-title">Cyber Security Incident Response Analyst</div>
+          <div class="exp-company">Proximus Ada</div>
+          <div class="exp-date">September 2024 &mdash; Present</div>
+          <ul class="exp-bullets">
+            <li>Digital forensic investigations across Windows, Linux, macOS, and vendor appliances (Ivanti, Palo Alto, Fortinet)</li>
+            <li>Multi-stage incident investigation end-to-end: initial access through lateral movement to impact</li>
+            <li>EDR tooling and log correlation to reconstruct attack timelines and identify indicators of compromise</li>
+            <li>Root cause analysis and actionable remediation guidance for clients and stakeholders</li>
+          </ul>
+        </div>
+        <div class="exp-entry">
+          <div class="exp-title">Internship CSIRT &mdash; Red Team</div>
+          <div class="exp-company">Proximus Ada</div>
+          <div class="exp-date">July 2023 &mdash; September 2023</div>
+          <ul class="exp-bullets">
+            <li>Security assessment of physical access control badge system (RFID/NFC cryptographic weaknesses)</li>
+            <li>Enhanced Proxmark open-source tool for red team offensive workflows</li>
+            <li>Participated in real-world red team engagement against production environment</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Skills</h2>
+
+        <div class="skills-category">
+          <div class="skills-category-name">Domains</div>
+          <span class="skill-pill">Networking</span>
+          <span class="skill-pill">Cybersecurity</span>
+          <span class="skill-pill">Incident Response</span>
+          <span class="skill-pill">Penetration Testing</span>
+        </div>
+
+        <div class="skills-category">
+          <div class="skills-category-name">Threat Intelligence &amp; Analysis</div>
+          <span class="skill-pill">MISP</span>
+          <span class="skill-pill">Recorded Future</span>
+          <span class="skill-pill">Cuckoo Sandbox</span>
+          <span class="skill-pill">CAPEv2</span>
+          <span class="skill-pill">YARA</span>
+        </div>
+
+        <div class="skills-category">
+          <div class="skills-category-name">SIEM &amp; EDR</div>
+          <span class="skill-pill">Splunk</span>
+          <span class="skill-pill">Elastic Stack</span>
+          <span class="skill-pill">Security Onion</span>
+          <span class="skill-pill">MDE</span>
+          <span class="skill-pill">CrowdStrike</span>
+          <span class="skill-pill">SentinelOne</span>
+        </div>
+
+        <div class="skills-category">
+          <div class="skills-category-name">Detection Engineering</div>
+          <span class="skill-pill">Sigma Rules</span>
+          <span class="skill-pill">Sysmon</span>
+        </div>
+
+        <div class="skills-category">
+          <div class="skills-category-name">Security Tools</div>
+          <span class="skill-pill">FortiGate</span>
+          <span class="skill-pill">Cisco</span>
+          <span class="skill-pill">pfSense</span>
+          <span class="skill-pill">Suricata</span>
+          <span class="skill-pill">Snort</span>
+          <span class="skill-pill">MDO 365</span>
+          <span class="skill-pill">Blue Coat</span>
+        </div>
+
+        <div class="skills-category">
+          <div class="skills-category-name">Programming &amp; Scripting</div>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">C/C++</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">PowerShell</span>
+          <span class="skill-pill">Bash</span>
+          <span class="skill-pill">PHP</span>
+          <span class="skill-pill">SQL</span>
+        </div>
+
+        <div class="skills-category">
+          <div class="skills-category-name">Infrastructure &amp; Virtualization</div>
+          <span class="skill-pill">Proxmox</span>
+          <span class="skill-pill">Azure</span>
+        </div>
+
+        <div class="skills-category">
+          <div class="skills-category-name">Frameworks &amp; Methodologies</div>
+          <span class="skill-pill">MITRE ATT&amp;CK</span>
+          <span class="skill-pill">NIST IR Lifecycle</span>
+          <span class="skill-pill">PICERL</span>
+          <span class="skill-pill">Cyber Kill Chain</span>
+          <span class="skill-pill">Diamond Model</span>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ===== PAGE 2 ===== -->
+  <div class="page-break"></div>
+
+  <div class="cv-row">
+    <aside class="cv-sidebar">
+
+      <!-- CTF PARTICIPATIONS -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">CTF &amp; Exercises</h2>
+        <div class="ctf-entry">
+          <div class="ctf-name">Mastercard CyberDefense Exercise (CDX)</div>
+          <div class="ctf-detail">September 14&ndash;16, 2025</div>
+          <div class="ctf-role">Blue Team &mdash; Detection, hardening &amp; infrastructure protection</div>
+        </div>
+        <div class="ctf-entry">
+          <div class="ctf-name">CyberSecurity Challenge Belgium 2024</div>
+          <div class="ctf-detail">March 2024</div>
+          <div class="ctf-role">Finalist</div>
+        </div>
+        <div class="ctf-entry">
+          <div class="ctf-name">CyberSecurity Challenge Belgium 2023</div>
+          <div class="ctf-detail">March 2023</div>
+          <div class="ctf-role">Finalist</div>
+        </div>
+      </section>
+
+    </aside>
+
+    <div class="cv-main">
+
+      <!-- PROJECTS -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Projects</h2>
+
+        <div class="project-entry">
+          <div><span class="project-grade">19/20</span><span class="project-name">Attacking &amp; Defending a Network Topology</span></div>
+          <div class="project-tech">
+            <span class="project-tech-pill">Python</span>
+            <span class="project-tech-pill">Scapy</span>
+            <span class="project-tech-pill">Mininet</span>
+            <span class="project-tech-pill">nftables</span>
+          </div>
+          <p class="project-desc">Network security lab implementing port scanning, FTP brute-force, DDoS, and ARP cache poisoning attacks with nftables-based defense mechanisms on a Mininet topology.</p>
+        </div>
+
+        <div class="project-entry">
+          <div><span class="project-grade">20/20</span><span class="project-name">DNS Traffic Host Classifier</span></div>
+          <div class="project-tech">
+            <span class="project-tech-pill">Python</span>
+            <span class="project-tech-pill">scikit-learn</span>
+            <span class="project-tech-pill">tcpdump</span>
+            <span class="project-tech-pill">DNS Analysis</span>
+          </div>
+          <p class="project-desc">ML pipeline classifying network hosts as human, bot, or mixed from DNS traffic traces using decision trees, random forests, neural networks, and KNN.</p>
+        </div>
+
+        <div class="project-entry">
+          <div><span class="project-grade">16/20</span><span class="project-name">Malware Obfuscation &amp; AVET Extension for CAPEv2 Evasion</span></div>
+          <div class="project-tech">
+            <span class="project-tech-pill">C</span>
+            <span class="project-tech-pill">Shell</span>
+            <span class="project-tech-pill">Python</span>
+            <span class="project-tech-pill">AVET</span>
+            <span class="project-tech-pill">Syswhispers</span>
+          </div>
+          <p class="project-desc">Extended AVET framework with stageless Meterpreter payloads, dynamic API/NTAPI loading, direct syscall execution (Syswhispers2/3), and custom arithmetic encryption.</p>
+        </div>
+
+        <div class="project-entry">
+          <div><span class="project-grade">20/20</span><span class="project-name">Archive Format Fuzzer</span></div>
+          <div class="project-tech">
+            <span class="project-tech-pill">C</span>
+            <span class="project-tech-pill">Makefile</span>
+            <span class="project-tech-pill">Fuzzing</span>
+          </div>
+          <p class="project-desc">Custom fuzzer targeting archive extraction routines; discovered vulnerabilities across multiple architectures including M1 and x86_64.</p>
+        </div>
+
+        <div class="project-entry">
+          <div><span class="project-grade">17/20</span><span class="project-name">Belgian Rail Geospatial Database</span></div>
+          <div class="project-tech">
+            <span class="project-tech-pill">Python</span>
+            <span class="project-tech-pill">PostgreSQL</span>
+            <span class="project-tech-pill">PostGIS</span>
+            <span class="project-tech-pill">Flask</span>
+            <span class="project-tech-pill">Folium</span>
+          </div>
+          <p class="project-desc">Geospatial system combining PostgreSQL/PostGIS with OpenStreetMap data, GTFS transit schedules, and real-time SNCB train positions.</p>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>
