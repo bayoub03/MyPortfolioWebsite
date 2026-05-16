@@ -3,22 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Ayoub Bouhnine - CV</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    /* ========== FONTS (local, for WeasyPrint offline rendering) ========== */
+    @font-face {
+      font-family: 'Syne';
+      font-weight: 400 800;
+      font-style: normal;
+      src: url('fonts/Syne-Variable.ttf') format('truetype-variations');
+    }
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-weight: 300 700;
+      font-style: normal;
+      src: url('fonts/SpaceGrotesk-Variable.ttf') format('truetype-variations');
+    }
+
     /* ========== RESET & PAGE ========== */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     @page {
       size: 210mm 297mm;
-      margin: 10mm 12mm;
+      margin: 6mm 12mm;
     }
 
     html, body {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 8pt;
-      line-height: 1.4;
+      line-height: 1.35;
       color: #2b2520;
       background: #fff;
       -webkit-print-color-adjust: exact;
@@ -39,7 +50,7 @@
     }
 
     /* ========== HEADER ========== */
-    .cv-header { margin-bottom: 4mm; }
+    .cv-header { margin-bottom: 3mm; }
 
     .cv-name {
       font-family: 'Syne', sans-serif;
@@ -82,8 +93,6 @@
     }
 
     /* ========== TWO-COLUMN LAYOUT (Float) ========== */
-    .cv-row { overflow: hidden; }
-
     .cv-sidebar {
       float: left;
       width: 62mm;
@@ -93,13 +102,19 @@
       margin-left: 67mm;
     }
 
+    .cv-row::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
     /* ========== PAGE BREAK ========== */
     .page-break {
       page-break-before: always;
     }
 
     /* ========== SECTIONS ========== */
-    .cv-section { margin-bottom: 3.5mm; }
+    .cv-section { margin-bottom: 2.5mm; }
     .cv-section:last-child { margin-bottom: 0; }
 
     .cv-section-title {
@@ -223,7 +238,7 @@
     .achievement-item:last-child { margin-bottom: 0; }
 
     /* ========== EXPERIENCE ========== */
-    .exp-entry { margin-bottom: 3mm; }
+    .exp-entry { margin-bottom: 2.5mm; }
     .exp-entry:last-child { margin-bottom: 0; }
 
     .exp-title {
@@ -271,7 +286,7 @@
     .exp-bullets li:last-child { margin-bottom: 0; }
 
     /* ========== SKILLS ========== */
-    .skills-category { margin-bottom: 1.8mm; }
+    .skills-category { margin-bottom: 1mm; }
     .skills-category:last-child { margin-bottom: 0; }
 
     .skills-category-name {
@@ -281,7 +296,7 @@
       color: var(--accent-ochre);
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-bottom: 0.8mm;
+      margin-bottom: 0.5mm;
     }
 
     .skill-pill {
@@ -292,7 +307,7 @@
       background: var(--bg-secondary);
       padding: 0.6mm 1.8mm;
       border-radius: 2px;
-      line-height: 2.2;
+      line-height: 1.9;
       white-space: nowrap;
     }
 
@@ -327,9 +342,10 @@
 
     /* ========== PROJECTS ========== */
     .project-entry {
-      margin-bottom: 3mm;
+      margin-bottom: 2mm;
       padding-left: 3mm;
       border-left: 2px solid var(--accent-sage);
+      page-break-inside: avoid;
     }
 
     .project-entry:last-child { margin-bottom: 0; }
@@ -380,7 +396,7 @@
     .sidebar-divider {
       height: 1px;
       background: var(--border-color);
-      margin: 3mm 0;
+      margin: 2mm 0;
     }
   </style>
 </head>
@@ -414,7 +430,7 @@
         <div class="edu-entry">
           <div class="edu-degree">M.Sc. Cybersecurity</div>
           <div class="edu-school">Universit&eacute; Libre de Bruxelles (ULB)</div>
-          <div class="edu-date">Sep 2022 &mdash; Jun 2024</div>
+          <div class="edu-date">September 2022 &mdash; June 2024</div>
           <div class="edu-detail">Specialization: Digital Forensics &amp; In-Depth Analysis</div>
           <div class="edu-detail" style="font-style: italic;">Thesis: Malware Obfuscation &amp; Evasion &mdash; AVET Framework Extension for CAPEv2 Sandbox Evasion</div>
           <span class="edu-honors">Grande Distinction</span>
@@ -422,7 +438,7 @@
         <div class="edu-entry">
           <div class="edu-degree">B.Sc. Computer Science</div>
           <div class="edu-school">Universit&eacute; Libre de Bruxelles (ULB)</div>
-          <div class="edu-date">Sep 2019 &mdash; Jun 2022</div>
+          <div class="edu-date">September 2019 &mdash; June 2022</div>
           <span class="edu-honors">Grande Distinction</span>
         </div>
       </section>
@@ -454,7 +470,7 @@
         <table class="lang-table">
           <tr><td class="lang-name">French</td><td class="lang-level">Native</td></tr>
           <tr><td class="lang-name">English</td><td class="lang-level">Fluent (C1)</td></tr>
-          <tr><td class="lang-name">Arabic</td><td class="lang-level">Fluent (C1)</td></tr>
+          <tr><td class="lang-name">Dutch</td><td class="lang-level">Elementary (A2)</td></tr>
         </table>
       </section>
 
@@ -466,6 +482,28 @@
         <div class="achievement-item">Grande Distinction &mdash; M.Sc. Cybersecurity, ULB, 2024</div>
         <div class="achievement-item">Grande Distinction &mdash; B.Sc. Computer Science, ULB, 2022</div>
         <div class="achievement-item">Finalist &mdash; CyberSecurity Challenge Belgium, 2023 &amp; 2024</div>
+      </section>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- CTF PARTICIPATIONS -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">CTF &amp; Exercises</h2>
+        <div class="ctf-entry">
+          <div class="ctf-name">Mastercard CyberDefense Exercise (CDX)</div>
+          <div class="ctf-detail">September 2025</div>
+          <div class="ctf-role">Blue Team &mdash; Detection, hardening &amp; infrastructure protection</div>
+        </div>
+        <div class="ctf-entry">
+          <div class="ctf-name">CyberSecurity Challenge Belgium 2024</div>
+          <div class="ctf-detail">March 2024</div>
+          <div class="ctf-role">Finalist</div>
+        </div>
+        <div class="ctf-entry">
+          <div class="ctf-name">CyberSecurity Challenge Belgium 2023</div>
+          <div class="ctf-detail">March 2023</div>
+          <div class="ctf-role">Finalist</div>
+        </div>
       </section>
 
     </aside>
@@ -573,39 +611,6 @@
         </div>
       </section>
 
-    </div>
-  </div>
-
-  <!-- ===== PAGE 2 ===== -->
-  <div class="page-break"></div>
-
-  <div class="cv-row">
-    <aside class="cv-sidebar">
-
-      <!-- CTF PARTICIPATIONS -->
-      <section class="cv-section">
-        <h2 class="cv-section-title">CTF &amp; Exercises</h2>
-        <div class="ctf-entry">
-          <div class="ctf-name">Mastercard CyberDefense Exercise (CDX)</div>
-          <div class="ctf-detail">September 14&ndash;16, 2025</div>
-          <div class="ctf-role">Blue Team &mdash; Detection, hardening &amp; infrastructure protection</div>
-        </div>
-        <div class="ctf-entry">
-          <div class="ctf-name">CyberSecurity Challenge Belgium 2024</div>
-          <div class="ctf-detail">March 2024</div>
-          <div class="ctf-role">Finalist</div>
-        </div>
-        <div class="ctf-entry">
-          <div class="ctf-name">CyberSecurity Challenge Belgium 2023</div>
-          <div class="ctf-detail">March 2023</div>
-          <div class="ctf-role">Finalist</div>
-        </div>
-      </section>
-
-    </aside>
-
-    <div class="cv-main">
-
       <!-- PROJECTS -->
       <section class="cv-section">
         <h2 class="cv-section-title">Projects</h2>
@@ -654,19 +659,8 @@
           <p class="project-desc">Custom fuzzer targeting archive extraction routines; discovered vulnerabilities across multiple architectures including M1 and x86_64.</p>
         </div>
 
-        <div class="project-entry">
-          <div><span class="project-grade">17/20</span><span class="project-name">Belgian Rail Geospatial Database</span></div>
-          <div class="project-tech">
-            <span class="project-tech-pill">Python</span>
-            <span class="project-tech-pill">PostgreSQL</span>
-            <span class="project-tech-pill">PostGIS</span>
-            <span class="project-tech-pill">Flask</span>
-            <span class="project-tech-pill">Folium</span>
-          </div>
-          <p class="project-desc">Geospatial system combining PostgreSQL/PostGIS with OpenStreetMap data, GTFS transit schedules, and real-time SNCB train positions.</p>
-        </div>
-
       </section>
+
     </div>
   </div>
 
